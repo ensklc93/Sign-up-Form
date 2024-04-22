@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.main-image {
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.credit {
+    position: absolute;
+    bottom: 1px;
+    left: 25%;
+    right: 25%;
+    font-size: clamp(0.2rem, 1vw, 1rem);
+    color: whitesmoke;
+}
+.credit > a {
+    color: whitesmoke;
+    
+}
+
+.side-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.first-section,
+.second-section,
+.third-section {
+    display: flex;
+    flex:1;
+}
+
+.first-section {
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 10px 10p 10px 0 rgba(0, 0, 0, 0.94);
+}
+
+.logo {
+    position: absolute;
+    background-color: rgb(18, 18, 19);
+    width: 100%;
+    top: 5rem;
+    text-align: center;
+    opacity: 0.3;
+    height: 10%;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.input-wrapper{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.input-wrapper > div {
+    width: 30%;
+    margin: 0 25px;
+    font-size: clamp(0.2rem, 1vw, 1rem);
+}
+
+input {
+    width: 100%;
+    padding: 3px;
+    border-radius: 2.5px;
+    font-size: larger;
+    border: 1px solid #E5E7EB;
+}
+
+input:focus {
+    outline: rgba(88, 165, 209, 0.425) 1px solid;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+}
+
+.third-section {
+    background-color: whitesmoke;
+    padding: 20px 10px;
+}
+
+button {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    width: 30%;
+    height: 20%;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color: rgb(46, 151, 46);
+    text-align:center;
+    transition: all 0.2s;
+}
+
+button:hover{
+color:#000000;
+background-color: yellowgreen;
+}
+
+input:invalid {
+    outline: 1px solid red;
+}
