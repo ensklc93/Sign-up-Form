@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form</title>
+  </head>
+  <link rel="stylesheet" href="./style.css" />
+  <body>
+    <div class="container">
+      <div class="image-wrapper">
+        <img
+          class="main-image"
+          src="./paul-pastourmatzis-nhFcSmJtAeo-unsplash.jpg"
+          alt="Man on hill near mountains"
+        />
+        <div class="logo">
+          <a href="https://github.com/ensklc93/">
+            <img src="./github-mark-white.svg" alt="Visit My Github Page" />
+          </a>
+        </div>
+        <div class="credit">
+          Photo by
+          <a
+            href="https://unsplash.com/@pueblovista?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Paul Pastourmatzis</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/man-on-hill-near-mountains-nhFcSmJtAeo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Unsplash</a
+          >
+        </div>
+      </div>
+
+      <div class="side-container">
+        <div class="first-section">
+          <div class="text-section">
+            Are you ready for the most breathtaking adventure of your life? Do
+            you want to discover the most amazing views this world has to offer?
+            Register below to see what the world has to offer.
+          </div>
+        </div>
+        <div class="second-section">
+          <form id="myForm" method="get" action="demo">
+            <div class="input-wrapper">
+              <div>
+              <label for="firstName"> First Name: </label>
+                <input type="text" id="firstName" name="firstName" pattern="([A-zÀ-ž\s]){2,}" required/>
+              </div>
+              <div>
+                <label for="lastName"> Last Name:</label>
+                <input type="text" id="lastName" name="lastName" pattern="([A-zÀ-ž\s]){2,}" required/>
+              </div>
+              <div>
+              <label for="email"> E-Mail: </label>
+                <input type="email" id="email" required/>
+              </div>
+              <div>
+                <label for="phone"> Phone Number: </label>
+                <input type="tel" id="phone" name="phone" pattern="^\+?[0-9]{5,16}$" title="Please enter a valid Phone Number" maxlength="16" required/>
+            </div>
+            <div>
+              <label for="password"> Password:</label>
+                <input type="password" id="password" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=.\-_*])([a-zA-Z0-9@#$%^&+=*.\-_]){3,}$"   title="Please enter a password with the following:
+                *Between 8-16 characters
+                *Must contain one Uppercase letter
+                *Must contain one lowerCase letter
+                *Must contain one number
+                *Must contain one special character"  required/>
+              </div>
+              <div>
+                <label for="passwordconfirm">  Confirm Password:</label>
+                <input type="password" id="passwordconfirm" required/>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="third-section">
+          <button type="submit" form="myForm"> buttone</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
