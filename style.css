@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+
+button,
+input {
+  appearance: none;
+}
+
 .container {
     display: flex;
 }
@@ -120,6 +126,29 @@ color:#000000;
 background-color: yellowgreen;
 }
 
-input:invalid {
+input:focus:invalid {
     outline: 1px solid red;
+}
+
+input:focus:valid {
+    outline: 1px solid green;
+}
+
+.password-div {
+    position: relative;
+}
+
+input[type=password]:focus:invalid + span::before {
+    white-space: pre;
+    content:"Please enter a password with the following: \00000a *Must contain between 8-16 characters \00000a *Must contain one Uppercase letter \00000a *Must contain one lowerCase letter \00000a *Must contain one number \00000a *Must contain one special character";
+    font-size: 0.9em;
+    position: absolute;
+    left: calc(100% + 10px);
+    background-color: rgb(18, 18, 19);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.3;
+    color: whitesmoke;
+    font-weight: bolder;
+    
 }
