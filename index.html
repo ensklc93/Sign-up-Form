@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
     <title>Sign-up Form</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <link rel="stylesheet" href="./style.css" />
   <body>
     <div class="container">
       <div class="image-wrapper">
@@ -15,7 +16,7 @@
           alt="Man on hill near mountains"
         />
         <div class="logo">
-          <a href="https://github.com/ensklc93/">
+          <a href="https://github.com/ensklc93">
             <img src="./github-mark-white.svg" alt="Visit My Github Page" />
           </a>
         </div>
@@ -36,13 +37,14 @@
       <div class="side-container">
         <div class="first-section">
           <div class="text-section">
-            Are you ready for the most breathtaking adventure of your life? Do
-            you want to discover the most amazing views this world has to offer?
-            Register below to see what the world has to offer.
+            <p>Are you ready for the <em><strong>most breathtaking adventure</strong></em> of your life?</p>
+            <p>Do you want to discover the treasures that the world has to offer <em>you?</em></p>
+            <p>Sign up below to be a part of an incredible journey!</p>
           </div>
         </div>
         <div class="second-section">
-          <form id="myForm" method="get" action="demo">
+          <h1>Join us!</h1>
+          <form id="myForm">
             <div class="input-wrapper">
               <div>
                 <label for="firstName"> First Name: </label>
@@ -96,14 +98,15 @@
                 <span></span>
               </div>
               <div>
-                <label for="passwordconfirm"> Confirm Password:</label>
-                <input type="password" id="passwordconfirm" required />
+                <label for="password-confirm"> Confirm Password:</label>
+                <input type="password" id="password-confirm" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=.\-_*])([a-zA-Z0-9@#$%^&+=*.\-_]){8,16}$" required />
               </div>
             </div>
           </form>
         </div>
         <div class="third-section">
-          <button type="submit" form="myForm">buttone</button>
+          <button type="submit" form="myForm">Create Account</button>
+          <p>Already have an account? <a href="https://github.com/ensklc93" target="_blank">Log in</a></p>
         </div>
       </div>
     </div>
